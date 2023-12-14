@@ -89,19 +89,20 @@ export default function GameDetail() {
   };
 
   const removeFromFavorites = async () => {
-    console.log(favorites[0].game_id);
-    console.log(game.id);
     try {
       const { error } = await supabase
         .from("favorites")
         .delete()
-        .eq("game_id", favorites[0].game_id)
-        .eq("profile_id", userSession.user.id);
+        .eq("id", favorites[0].id)
+        .eq("game_id", game.id)
+        .eq("profile_id", userSession.user.id)
+        .eq("game_name", game.name);
 
       if (error) {
         console.error("Error removing from favorites:", error.message);
       } else {
         getFavGame();
+        console.log("in teoria cancellato");
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);
@@ -130,6 +131,7 @@ export default function GameDetail() {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getGamesScreenshoots();
     if (userSession) {
