@@ -1,0 +1,6 @@
+.pageButton{
+    width: 50px;
+    border: none;
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}

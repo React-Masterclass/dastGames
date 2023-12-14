@@ -1,0 +1,10 @@
+.messageContainer{
+    border-radius: 15px;
+    background-color: var(--secondaryColor);
+}
+.createdAtP{
+    font-size: 0.75rem;
+}
+.messageContent {
+    word-wrap: break-word;
+  }

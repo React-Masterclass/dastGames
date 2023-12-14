@@ -1,0 +1,38 @@
+:root{
+  --primaryColor : #151515;
+  --secondaryColor : rgb(180,180,180);
+}
+
+.tx-primary{
+  color: var(--primaryColor);
+}
+.tx-secondary{
+  color: var(--secondaryColor);
+}
+
+.bg-primar{
+  background-color: var(--primaryColor);
+}
+
+.bg-second{
+  background-color: var(--secondaryColor);
+}
+
+*{
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+body{
+  background-color: var(--primaryColor);
+
+}
+
+.button{
+
+    border: none;
+    background-color: var(--secondaryColor);
+    padding: 10px;
+    border-radius: 15px;
+
+}
