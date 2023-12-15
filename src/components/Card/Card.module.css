@@ -1,48 +1,84 @@
-.cardBody{
-    background-color: #202020 ;
-    position: relative;
-    border-bottom-right-radius: none !important;
-    border-bottom-left-radius: none !important;
-    height: 275px;
-    width: 350px;
-}
-.pFooter{
-    font-size: 0.75rem;
-}
-.imgHeight{
-    height: 175px ;
-}
-.cardFooter{
-    background-color: #202020 ;
-    width: 100%;
-    height: 120px;
-    position: absolute;
-    bottom: -100px;
-    z-index: 1;
-    border-radius: 5px;
+.cardBody {
+  background-color: #202020;
+  position: relative;
+  border-bottom-right-radius: none !important;
+  border-bottom-left-radius: none !important;
+  height: 275px;
+  width: 350px;
 }
 
+.pFooter {
+  font-size: 0.75rem;
+}
+
+.imgContainer {
+  height: 175px; /* Adjust the height of the image container */
+  width: 100%; /* Make the width of the container 100% */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
+
+.imgHeight {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+
+.cardFooter {
+  background-color: #202020;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: -130px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.scopri {
+  display: none;
+}
 
 /* Stili per schermi di dimensioni inferiori a 600 pixel (ad esempio, telefoni) */
 @media only screen and (max-width: 768px) {
-    .cardBody{
-        height: 200px;
-        width: 225px;
-    }
+  .cardBody {
+      height: 230px;
+      width: 225px;
   }
 
-  /* Stili per schermi di dimensioni comprese tra 601 e 1024 pixel (ad esempio, tablet) */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .cardBody{
-        height: 225px;
-        width: 250px;
-    }
-
+  .imgContainer {
+      height: 130px; /* Adjust the height of the image container for smaller screens */
   }
 
-  /* Stili per schermi di dimensioni superiori a 1024 pixel (ad esempio, computer desktop) */
-  @media only screen and (min-width: 1025px) {
-    body {
+  .scopri {
+      display: block;
+  }
+}
+
+/* Stili per schermi di dimensioni comprese tra 601 e 1024 pixel (ad esempio, tablet) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .cardBody {
+      height: 230px;
+      width: 250px;
+  }
+
+  .imgContainer {
+      height: 130px; /* Adjust the height of the image container for medium-sized screens */
+  }
+  .cardFooter {
+    height: 170px;
+    bottom: -150px;
+
+  }
+  .scopri {
+      display: block;
+  }
+}
+
+/* Stili per schermi di dimensioni superiori a 1024 pixel (ad esempio, computer desktop) */
+@media only screen and (min-width: 1025px) {
+  body {
       font-size: 18px;
-    }
   }
+}

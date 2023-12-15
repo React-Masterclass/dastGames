@@ -49,7 +49,7 @@ export default function Account() {
     getFavourites();
   },[]);
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <h1 className="tx-secondary text-center my-5">
           Ciao{" "}
@@ -61,7 +61,7 @@ export default function Account() {
       </div>
       <div className="row my-5">
         {/* Sidebar */}
-        <div className="col-12 col-md-4 col-lg-3">
+        <div className="col-12 col-md-4 col-lg-3 me-3">
           <div className="row flex-column border-end border-black">
             <div className="col-12 d-flex justify-content-center">
               <img
@@ -99,7 +99,7 @@ export default function Account() {
           </div>
         </div>
         {/* Commenti e Preferiti */}
-        <div className="col-12 col-md-8 col-lg-9">
+        <div className="col-12 col-md-7 col-lg-8">
           <div className="row">
             <h2 className="tx-secondary text-center">I tuoi commenti</h2>
           </div>

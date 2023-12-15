@@ -11,6 +11,11 @@ import Account from "../pages/LoggedRoutes/Account";
 import Settings from "../pages/Settings/Settings";
 import CommentPage from "../pages/CommentPage/CommentPage"
 import { getSingleGame } from "../pages/GameDetail/GameDetail";
+import Stores from "../pages/Stores"
+import Publishers from "../pages/Publishers.jsx";
+import Developers from "../pages/Developers.jsx";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +33,19 @@ export const router = createBrowserRouter([
       {
         path: `/games/platform/:platformId`,
         element: <Platforms />
+      },
+      {
+        path: `/games/store/:storeId`,
+        element: <Stores />
+      },
+      {
+        path: `/games/publisher/:publisherId`,
+        element: <Publishers />
+      },
+
+      {
+        path: `/games/developer/:developerId`,
+        element: <Developers />
       },
       {
         path : "/game/:gameId",

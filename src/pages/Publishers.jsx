@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Card from "../components/Card/Card";
-import useGamesPlatform from "../hooks/useGamesPlatform";
-import usePlatforms from "../hooks/usePlatforms";
+import useGamesPublisher from "../hooks/useGamesPublisher";
+import usePublishers from "../hooks/usePublishers";
 import SearchBar from "../components/SearchBar/SearchBar";
 import style from "../pages/Home/Home.module.css"
 
-export default function Platforms() {
-  const { platformId } = useParams();
-  const platforms = usePlatforms();
+export default function Publishers() {
+  const { publisherId } = useParams();
+  const publishers = usePublishers();
 
-  let platformName;
+  let publisherName;
 
-  platforms.map((platform) => {
-    if (platform.id == platformId) {
-      platformName = platform.name;
+  publishers.map((publisher) => {
+    if (publisher.id == publisherId) {
+      publisherName = publisher.name;
     }
   });
 
@@ -24,10 +24,10 @@ export default function Platforms() {
     loading,
     pagination,
     search,
-    setPlatform,
+    setPublisher,
     setSearch,
     setPagination,
-  } = useGamesPlatform();
+  } = useGamesPublisher();
 
 
 
@@ -52,7 +52,7 @@ export default function Platforms() {
   };
 
   useEffect(() => {
-    setPlatform(platformId);
+    setPublisher(publisherId);
   },[]);
 
   return (
@@ -68,7 +68,7 @@ export default function Platforms() {
           {error}
         </article>
       )}
-      <h1 className="text-center my-4 tx-secondary">Giochi per {platformName}</h1>
+      <h1 className="text-center my-4 tx-secondary">Giochi pubblicati da {publisherName}</h1>
       <SearchBar search={search} setSearch={setSearch} />
       <div className="container-fluid">
         <div className="row justify-content-center">

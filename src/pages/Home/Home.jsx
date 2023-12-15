@@ -2,6 +2,7 @@ import Card from "../../components/Card/Card";
 import useRawgAPI from "../../hooks/useRawgAPI";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import style from "../../pages/Home/Home.module.css";
+import { Audio } from "react-loader-spinner";
 
 function Home() {
   const {
@@ -27,13 +28,24 @@ function Home() {
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
     <div className="d-flex flex-column">
-      {loading && "Caricamento..."}
+      {loading && (
+        <Audio
+          height="40"
+          width="40"
+          radius="9"
+          color="grey"
+          ariaLabel="loading"
+          wrapperStyle
+          wrapperClass
+          className="mt-5"
+        />
+      )}
       {error && (
         <article
           style={{
@@ -57,7 +69,7 @@ function Home() {
           })}
         </div>
       </div>
-      <hr className="tx-secondary"/>
+      <hr className="tx-secondary" />
       <div className="row w-100 m-0 justify-content-between">
         <div className="col-4 d-flex justify-content-end">
           <button

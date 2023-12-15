@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Card from "../components/Card/Card";
-import useGamesPlatform from "../hooks/useGamesPlatform";
-import usePlatforms from "../hooks/usePlatforms";
+import useGamesDeveloper from "../hooks/useGamesDeveloper";
+import useDevelopers from "../hooks/useDevelopers";
 import SearchBar from "../components/SearchBar/SearchBar";
 import style from "../pages/Home/Home.module.css"
 
-export default function Platforms() {
-  const { platformId } = useParams();
-  const platforms = usePlatforms();
+export default function Developers() {
+  const { developerId } = useParams();
+  const developers = useDevelopers();
 
-  let platformName;
+  let developerName;
 
-  platforms.map((platform) => {
-    if (platform.id == platformId) {
-      platformName = platform.name;
+  developers.map((developer) => {
+    if (developer.id == developerId) {
+      developerName = developer.name;
     }
   });
 
@@ -24,10 +24,10 @@ export default function Platforms() {
     loading,
     pagination,
     search,
-    setPlatform,
+    setDeveloper,
     setSearch,
     setPagination,
-  } = useGamesPlatform();
+  } = useGamesDeveloper();
 
 
 
@@ -52,9 +52,9 @@ export default function Platforms() {
   };
 
   useEffect(() => {
-    setPlatform(platformId);
+    setDeveloper(developerId);
   },[]);
-
+console.log(games);
   return (
     <div className="d-flex flex-column">
       {loading && "Caricamento..."}
@@ -68,7 +68,7 @@ export default function Platforms() {
           {error}
         </article>
       )}
-      <h1 className="text-center my-4 tx-secondary">Giochi per {platformName}</h1>
+      <h1 className="text-center my-4 tx-secondary">Giochi sviluppati da {developerName}</h1>
       <SearchBar search={search} setSearch={setSearch} />
       <div className="container-fluid">
         <div className="row justify-content-center">

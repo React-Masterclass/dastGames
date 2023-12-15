@@ -19,20 +19,30 @@ export default function Genres() {
     setPagination,
   } = useGamesGenre();
 
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const handlePaginationClicknext = () => {
-    // Increment pagination value when the button is clicked
     setPagination(pagination + 1);
+    handleScrollToTop();
+
   };
   const handlePaginationClickbef = () => {
-    console.log(pagination);
     if (pagination > 1) {
       setPagination(pagination - 1);
+    handleScrollToTop();
+
     }
   };
 
   useEffect(()=>{
     setGenre(genre);
-  })
+  },[])
 
   return (
     <div className="d-flex flex-column">

@@ -1,20 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import Card from "../components/Card/Card";
-import useGamesPlatform from "../hooks/useGamesPlatform";
-import usePlatforms from "../hooks/usePlatforms";
+import useGamesStore from "../hooks/useGamesStore";
+import useStores from "../hooks/useStores";
 import SearchBar from "../components/SearchBar/SearchBar";
 import style from "../pages/Home/Home.module.css"
 
-export default function Platforms() {
-  const { platformId } = useParams();
-  const platforms = usePlatforms();
+export default function Stores() {
+  const { storeId } = useParams();
+  const stores = useStores();
 
-  let platformName;
-
-  platforms.map((platform) => {
-    if (platform.id == platformId) {
-      platformName = platform.name;
+  let storeName;
+console.log(stores);
+  stores.map((store) => {
+    if (store.id == storeId) {
+      storeName = store.name;
     }
   });
 
@@ -24,12 +24,10 @@ export default function Platforms() {
     loading,
     pagination,
     search,
-    setPlatform,
+    setStore,
     setSearch,
     setPagination,
-  } = useGamesPlatform();
-
-
+  } = useGamesStore();
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -52,7 +50,7 @@ export default function Platforms() {
   };
 
   useEffect(() => {
-    setPlatform(platformId);
+    setStore(storeId);
   },[]);
 
   return (
@@ -68,7 +66,7 @@ export default function Platforms() {
           {error}
         </article>
       )}
-      <h1 className="text-center my-4 tx-secondary">Giochi per {platformName}</h1>
+      <h1 className="text-center my-4 tx-secondary">Giochi disponibili su {storeName}</h1>
       <SearchBar search={search} setSearch={setSearch} />
       <div className="container-fluid">
         <div className="row justify-content-center">
