@@ -11,7 +11,7 @@ function AppFooter() {
       <div className="row m-0 my-5">
         <div className="col-5 col-md-2">
           <img
-            src={"../../public/dastgame-logo.png"}
+            src="https://djwpyiaajdldabatncon.supabase.co/storage/v1/object/public/avatars/dastgame-logo.png"
             alt=""
             className="img-fluid"
           />

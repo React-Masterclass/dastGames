@@ -14,7 +14,7 @@ import useProfile from "../../hooks/useProfile";
       <div className="container-fluid">
         <Link to={"/"} className="text-decoration-none ms-3">
           <img
-            src="../../../public/dastgame-logo.png"
+            src="https://djwpyiaajdldabatncon.supabase.co/storage/v1/object/public/avatars/dastgame-logo.png"
             alt="logo"
             className={`${style.logo} img-fluid`}
           />
