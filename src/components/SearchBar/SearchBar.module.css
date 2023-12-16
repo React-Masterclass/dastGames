@@ -1,9 +1,0 @@
-.search{
-    background-color: var(--secondaryColor);
-    border: none;
-    padding: 10px;
-    border-radius: 15px;
-}
-.search:focus{
-    border: none;
-}
