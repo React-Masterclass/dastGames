@@ -49,5 +49,5 @@ Piattaforma che mostra videogiochi, e da la possibilitá ai suoi utenti autentic
   * Utenti loggati possono condividere dati all'interno dell'applicazione
 
 ## Deployment
-# dastGames
-# dastGames
+ [dastGames](https://dast-games.vercel.app)
+
