@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import AppContext from "../../contexts/Appcontext";
 import style from "../AppNavbar/AppNavbar.module.css";
 import { useContext } from "react";
-import getProfileImg from "../../utils/getProfileImg";
+import getProfileImg from "../../utils/GetProfileImg.js";
 import useProfile from "../../hooks/useProfile";
 
  function AppNavbar() {
