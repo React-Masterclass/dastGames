@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import supabase from "../../supabase/client";
-import AppContext from "../../contexts/AppContext";
+import AppContext from "../../contexts/Appcontext.jsx";
 import Avatar from "../../components/Avatar";
 import style from "../../pages/Register/Register.module.css";
 

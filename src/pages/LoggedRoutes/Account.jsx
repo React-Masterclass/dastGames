@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import AppContext from "../../contexts/Appcontext";
 import useProfile from "../../hooks/useProfile";
-import getProfileImg from "../../utils/getProfileImg";
+import getProfileImg from "../../utils/GetProfileImg.js";
 import supabase from "../../supabase/client";
 import { IoMdSettings } from "react-icons/io";
 import { Link } from "react-router-dom";
