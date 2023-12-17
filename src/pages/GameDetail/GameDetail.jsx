@@ -290,8 +290,8 @@ export default function GameDetail() {
                           />
                         </div>
                         <div className="col-3">
-                          <button type="submit" className={style.buttons}>
-                            Invia <IoMdSend />
+                          <button type="submit" className={`${style.buttons}`}>
+                            <IoMdSend />
                           </button>
                         </div>
                       </Form>
