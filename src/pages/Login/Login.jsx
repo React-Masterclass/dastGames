@@ -40,12 +40,6 @@ export default function Login() {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
-        options: {
-          queryParams: {
-            access_type: "online",
-            prompt: "consent",
-          },
-        },
       });
       if (error) {
         // eslint-disable-next-line no-alert
