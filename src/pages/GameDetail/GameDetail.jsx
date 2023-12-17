@@ -290,7 +290,7 @@ export default function GameDetail() {
                           />
                         </div>
                         <div className="col-3">
-                          <button type="submit" className={`${style.buttons}`}>
+                          <button type="submit" className={`btn btn-success`}>
                             <IoMdSend />
                           </button>
                         </div>
