@@ -42,7 +42,7 @@ export default function Login() {
         provider: "google",
         options: {
           queryParams: {
-            access_type: "offline",
+            access_type: "online",
             prompt: "consent",
           },
         },
